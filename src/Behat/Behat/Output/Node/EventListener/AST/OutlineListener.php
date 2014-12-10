@@ -172,11 +172,8 @@ final class OutlineListener implements EventListener
             return;
         }
 
-<<<<<<< HEAD
-        $this->stepSetupPrinter->printSetup($formatter, $event->getSetup(), '');
-=======
         $this->stepSetupPrinter->printSetup($formatter, $event->getSetup());
->>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
+
     }
 
     /**
