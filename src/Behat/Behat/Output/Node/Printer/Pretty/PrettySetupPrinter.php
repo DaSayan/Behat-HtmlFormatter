@@ -76,7 +76,7 @@ final class PrettySetupPrinter implements SetupPrinter
     /**
      * {@inheritdoc}
      */
-    public function printSetup(Formatter $formatter, Setup $setup, $eventName)
+    public function printSetup(Formatter $formatter, Setup $setup)
     {
         if (!$setup instanceof HookedSetup) {
             return;
