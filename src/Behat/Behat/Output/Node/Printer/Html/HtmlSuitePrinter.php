@@ -37,9 +37,15 @@ class HtmlSuitePrinter implements SuitePrinter {
      */
     public function printHeader(Formatter $formatter, Suite $suite){
 
+        if (!$suite->hasSetting('filters') || !is_array($suite->getSetting('filters'))) {
+            $filtersArray = array();
+        } else {
+            $filtersArray = $suite->getSetting('filters') ;
+        }
+    
         $templateValues = array(
             'name' => $suite->getName(),
-            'filters' => $suite->getSetting('filters'),
+            'filters' => $filtersArray,
             'contexts' => $suite->getSetting('contexts'),
             'paths' => $suite->getSetting('paths')
         );
