@@ -1,10 +1,6 @@
 #!/usr/bin/env php
 <?php
-<<<<<<< HEAD
 $inc_path = ini_get("include_path");
-ini_set('include_path', $inc_path. ';d:/www/tools/behat/pear');
-=======
->>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 
 /*
  * This file is part of the Behat.
