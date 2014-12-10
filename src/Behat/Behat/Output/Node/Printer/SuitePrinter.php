@@ -33,4 +33,19 @@ interface SuitePrinter
      * @param Suite $suite
      */
     public function printFooter(Formatter $formatter, Suite $suite);
+    
+    /**
+     * Prints suite ExerciseHeader using provided formatter
+     *
+     * @param Formatter  $formatter
+     */    
+    public function printExerciseHeader(Formatter $formatter);
+    
+    /**
+     * Prints suite ExerciseFooter using provided formatter
+     *
+     * @param Formatter  $formatter
+     */        
+    public function printExerciseFooter(Formatter $formatter);
+    
 }

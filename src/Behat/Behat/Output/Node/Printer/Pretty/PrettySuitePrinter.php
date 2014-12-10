@@ -26,6 +26,13 @@ class PrettySuitePrinter implements SuitePrinter {
     public function printFooter(Formatter $formatter, Suite $suite){
 
     }
+    
+    public function printExerciseHeader(Formatter $formatter) {
+    
+    }
+    
+    public function printExerciseFooter(Formatter $formatter) {
 
+    }    
 
 }
