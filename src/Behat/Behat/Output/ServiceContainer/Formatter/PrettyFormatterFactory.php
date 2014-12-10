@@ -91,7 +91,10 @@ class PrettyFormatterFactory implements FormatterFactory
         $definition = new Definition('Behat\Testwork\Output\Node\EventListener\ChainEventListener', array(
             array(
                 new Definition('Behat\Behat\Output\Node\EventListener\AST\SuiteListener', array(
+<<<<<<< HEAD
                     new Reference('output.node.printer.pretty.suite'),
+=======
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
                     new Reference('output.node.printer.pretty.suite_setup')
                 )),
                 new Definition('Behat\Behat\Output\Node\EventListener\AST\FeatureListener', array(
@@ -212,9 +215,12 @@ class PrettyFormatterFactory implements FormatterFactory
      */
     protected function loadCorePrinters(ContainerBuilder $container)
     {
+<<<<<<< HEAD
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Pretty\PrettySuitePrinter');
         $container->setDefinition('output.node.printer.pretty.suite', $definition);
 
+=======
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Pretty\PrettyFeaturePrinter');
         $container->setDefinition('output.node.printer.pretty.feature', $definition);
 
@@ -356,6 +362,7 @@ class PrettyFormatterFactory implements FormatterFactory
      */
     protected function loadStatisticsPrinter(ContainerBuilder $container)
     {
+<<<<<<< HEAD
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Pretty\PrettyCounterPrinter', array(
             new Reference(self::RESULT_TO_STRING_CONVERTER_ID),
             new Reference(TranslatorExtension::TRANSLATOR_ID),
@@ -363,16 +370,33 @@ class PrettyFormatterFactory implements FormatterFactory
         $container->setDefinition('output.node.printer.pretty.counter', $definition);
 
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Pretty\PrettyListPrinter', array(
+=======
+        $definition = new Definition('Behat\Behat\Output\Node\Printer\CounterPrinter', array(
+            new Reference(self::RESULT_TO_STRING_CONVERTER_ID),
+            new Reference(TranslatorExtension::TRANSLATOR_ID),
+        ));
+        $container->setDefinition('output.node.printer.counter', $definition);
+
+        $definition = new Definition('Behat\Behat\Output\Node\Printer\ListPrinter', array(
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
             new Reference(self::RESULT_TO_STRING_CONVERTER_ID),
             new Reference(ExceptionExtension::PRESENTER_ID),
             new Reference(TranslatorExtension::TRANSLATOR_ID),
             '%paths.base%'
         ));
+<<<<<<< HEAD
         $container->setDefinition('output.node.printer.pretty.list', $definition);
 
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Pretty\PrettyStatisticsPrinter', array(
             new Reference('output.node.printer.pretty.counter'),
             new Reference('output.node.printer.pretty.list')
+=======
+        $container->setDefinition('output.node.printer.list', $definition);
+
+        $definition = new Definition('Behat\Behat\Output\Node\Printer\Pretty\PrettyStatisticsPrinter', array(
+            new Reference('output.node.printer.counter'),
+            new Reference('output.node.printer.list')
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
         ));
         $container->setDefinition('output.node.printer.pretty.statistics', $definition);
     }

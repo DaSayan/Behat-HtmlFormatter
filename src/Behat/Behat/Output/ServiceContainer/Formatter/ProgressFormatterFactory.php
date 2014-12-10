@@ -91,6 +91,7 @@ class ProgressFormatterFactory implements FormatterFactory
      */
     protected function loadCorePrinters(ContainerBuilder $container)
     {
+<<<<<<< HEAD
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Progress\ProgressCounterPrinter', array(
             new Reference(self::RESULT_TO_STRING_CONVERTER_ID),
             new Reference(TranslatorExtension::TRANSLATOR_ID),
@@ -98,12 +99,25 @@ class ProgressFormatterFactory implements FormatterFactory
         $container->setDefinition('output.node.printer.progress.counter', $definition);
 
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Progress\ProgressListPrinter', array(
+=======
+        $definition = new Definition('Behat\Behat\Output\Node\Printer\CounterPrinter', array(
+            new Reference(self::RESULT_TO_STRING_CONVERTER_ID),
+            new Reference(TranslatorExtension::TRANSLATOR_ID),
+        ));
+        $container->setDefinition('output.node.printer.counter', $definition);
+
+        $definition = new Definition('Behat\Behat\Output\Node\Printer\ListPrinter', array(
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
             new Reference(self::RESULT_TO_STRING_CONVERTER_ID),
             new Reference(ExceptionExtension::PRESENTER_ID),
             new Reference(TranslatorExtension::TRANSLATOR_ID),
             '%paths.base%'
         ));
+<<<<<<< HEAD
         $container->setDefinition('output.node.printer.progress.list', $definition);
+=======
+        $container->setDefinition('output.node.printer.list', $definition);
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Progress\ProgressStepPrinter', array(
             new Reference(self::RESULT_TO_STRING_CONVERTER_ID)
@@ -111,8 +125,13 @@ class ProgressFormatterFactory implements FormatterFactory
         $container->setDefinition('output.node.printer.progress.step', $definition);
 
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Progress\ProgressStatisticsPrinter', array(
+<<<<<<< HEAD
             new Reference('output.node.printer.progress.counter'),
             new Reference('output.node.printer.progress.list')
+=======
+            new Reference('output.node.printer.counter'),
+            new Reference('output.node.printer.list')
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
         ));
         $container->setDefinition('output.node.printer.progress.statistics', $definition);
     }
