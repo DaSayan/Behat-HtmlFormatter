@@ -1,7 +1,5 @@
 #!/usr/bin/env php
 <?php
-$inc_path = ini_get("include_path");
-
 /*
  * This file is part of the Behat.
  * (c) Konstantin Kudryashov <ever.zet@gmail.com>
