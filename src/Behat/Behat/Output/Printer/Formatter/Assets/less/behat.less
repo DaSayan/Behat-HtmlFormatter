@@ -1,0 +1,253 @@
+@import "../../../../../../../../../../twbs/bootstrap/less/bootstrap";
+
+
+//Start Callouts taken from Bootstrap Docs
+//https://gist.github.com/matthiasg/6153853/#comment-1182926
+.bs-callout(@color, @bgcolor: lighten(@color, 35%)) {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid @color;
+  border-left: 5px solid @color;
+  border-radius: 3px;
+  background-color: @bgcolor;
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    color: @color;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  code, .highlight {
+    background-color: @code-color;
+  }
+}
+
+.bs-callout-primary {
+  .bs-callout(@brand-primary, lighten(@brand-primary, 45%));
+}
+
+.bs-callout-danger {
+  .bs-callout(@brand-danger);
+}
+
+.bs-callout-warning {
+  .bs-callout(@brand-warning, lighten(@brand-warning, 30%));
+}
+
+.bs-callout-info {
+  .bs-callout(@brand-info);
+}
+
+.bs-callout-success {
+  .bs-callout(@brand-success);
+}
+
+//End callouts taken from bootstrap docs
+
+#behat {
+  .make-xs-column(12);
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  //Padded for summary to be added at end
+  padding-top: 135px;
+
+  .keyword {
+    font-weight: bold;
+  }
+
+  //All paths outside of stats styled this way
+  .path {
+    float:right;
+  }
+
+  //All errors styled this way
+  pre.backtrace {
+    .bs-callout-danger();
+    font-family:monospace;
+    background: @body-bg;
+  }
+
+  .suite {
+    .suite_info{
+      .bs-callout-primary();
+      ul{
+        padding-left: 0px;
+        list-style: none;
+      }
+      h5 {
+        padding-top: 10px;
+      }
+    }
+    .feature {
+
+      .make-xs-column(12);
+
+      .passed {
+        .bs-callout-success();
+      }
+      .failed {
+        .bs-callout-danger();
+      }
+      .undefined, .pending {
+        .bs-callout-warning();
+      }
+      .skipped {
+        .bs-callout-info();
+      }
+
+      .scenario {
+        .make-xs-column(12);
+
+        &.outline {
+          > .examples {
+            .make-xs-column(11);
+            .make-xs-column-offset(1);
+          }
+        }
+
+        thead {
+          tr, td {
+            border: 1px solid @brand-info;
+            border-left-width: 5px;
+          }
+        }
+
+        > ol {
+          .make-xs-column(12);
+          list-style:none;
+          &:after{
+            content:'';
+            display:block;
+            clear:both;
+          }
+          li {
+            .make-xs-column(12);
+          }
+        }
+      }
+    }
+  }
+
+  //Makes the tags into coloured boxes in feature and scenario
+  ul.tags {
+    padding-left: 0px;
+    list-style:none;
+    margin: 0px; //remove massive space
+    li {
+      .label();
+      .label-primary();
+      display:inline-block;
+      margin:3px; //added so they don't run together
+
+      //Custom tag colours go here
+      &.admin {
+        background: @brand-danger;
+      }
+    }
+  }
+
+  //For js functionality (opening and closing divs)
+  .jq-toggle {
+    > .suite_info, > .feature, > .scenario, > ol, > .examples{
+      display:none;
+    }
+    > h2, > h3{
+      cursor:pointer;
+      &:after{
+        content:' |+';
+        font-weight:bold;
+      }
+    }
+  }
+
+  .suite_info {
+    &.jq-toggle {
+      h4, ul, span {
+        display:none;
+      }
+    }
+  }
+
+  //For js functionality (opening and closing divs)
+  .jq-toggle-opened {
+    > .suite_info, > .feature, > .scenario, > ol, > .examples{
+      display:block;
+    }
+    > h2, > h3{
+      &:after{
+        content:' |-';
+        font-weight:bold;
+      }
+    }
+  }
+
+  .suite_info {
+    &.jq-toggle-opened {
+      h4, ul, span {
+        display:block;
+      }
+    }
+  }
+
+}
+
+.summary {
+  //All scenario steps are coloured this way
+  .make-xs-column(12);
+
+  //Position absolutely at top of page
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 125px;
+  margin-top: 0px;
+
+  .switcher {
+    color: @link-color;
+    text-decoration: @link-hover-decoration;
+    cursor: pointer;
+    &:hover{
+      color: @link-hover-color;
+    }
+  }
+  .switchers{
+    margin-top: 10px;
+    .switcher {
+      padding-right: 10px;
+    }
+  }
+
+  &.passed {
+    .bs-callout-success();
+  }
+  &.failed {
+    .bs-callout-danger();
+  }
+  &.undefined, .pending {
+    .bs-callout-warning();
+  }
+  &.skipped {
+    .bs-callout-info();
+  }
+
+  strong {
+    &.passed{
+      color: @brand-success;
+    }
+    &.failed{
+      color: @brand-danger;
+    }
+    &.skipped{
+      color: @brand-info;
+    }
+  }
+}
+
+
+
+
+
+
