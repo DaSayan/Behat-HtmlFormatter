@@ -10,12 +10,15 @@
 
 namespace Behat\Behat\Output\Node\Printer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Behat\Behat\Output\Statistics\HookStat;
 use Behat\Behat\Output\Statistics\ScenarioStat;
 use Behat\Behat\Output\Statistics\StepStat;
 use Behat\Testwork\Output\Printer\OutputPrinter;
 
 =======
+=======
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 
 use Behat\Behat\Output\Node\Printer\Helper\ResultToStringConverter;
 use Behat\Behat\Output\Statistics\HookStat;
@@ -25,6 +28,9 @@ use Behat\Testwork\Exception\ExceptionPresenter;
 use Behat\Testwork\Output\Printer\OutputPrinter;
 use Behat\Testwork\Tester\Result\TestResult;
 use Symfony\Component\Translation\TranslatorInterface;
+<<<<<<< HEAD
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
+=======
 >>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 
 /**
@@ -33,10 +39,13 @@ use Symfony\Component\Translation\TranslatorInterface;
  * @author Konstantin Kudryashov <ever.zet@gmail.com>
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ListPrinter
 {
     /**
 =======
+=======
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 final class ListPrinter
 {
     /**
@@ -77,6 +86,9 @@ final class ListPrinter
     }
 
     /**
+<<<<<<< HEAD
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
+=======
 >>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
      * Prints scenarios list.
      *
@@ -86,9 +98,12 @@ final class ListPrinter
      * @param ScenarioStat[] $scenarioStats
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function printScenariosList(OutputPrinter $printer, $intro, $resultCode, array $scenarioStats);
 
 =======
+=======
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
     public function printScenariosList(OutputPrinter $printer, $intro, $resultCode, array $scenarioStats)
     {
         if (!count($scenarioStats)) {
@@ -106,6 +121,9 @@ final class ListPrinter
 
         $printer->writeln();
     }
+<<<<<<< HEAD
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
+=======
 >>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 
     /**
@@ -117,9 +135,12 @@ final class ListPrinter
      * @param StepStat[]    $stepStats
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function printStepList(OutputPrinter $printer, $intro, $resultCode, array $stepStats);
 
 =======
+=======
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
     public function printStepList(OutputPrinter $printer, $intro, $resultCode, array $stepStats)
     {
         if (!count($stepStats)) {
@@ -140,6 +161,9 @@ final class ListPrinter
             $this->printStat($printer, $name, $path, $style, $stdOut, $error);
         }
     }
+<<<<<<< HEAD
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
+=======
 >>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 
     /**
@@ -150,9 +174,12 @@ final class ListPrinter
      * @param HookStat[]    $failedHookStats
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function printFailedHooksList(OutputPrinter $printer, $intro, array $failedHookStats);
 
 =======
+=======
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
     public function printFailedHooksList(OutputPrinter $printer, $intro, array $failedHookStats)
     {
         if (!count($failedHookStats)) {
@@ -219,5 +246,8 @@ final class ListPrinter
 
         return str_replace($this->basePath . DIRECTORY_SEPARATOR, '', $path);
     }
+<<<<<<< HEAD
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
+=======
 >>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 }

@@ -92,6 +92,7 @@ class ProgressFormatterFactory implements FormatterFactory
     protected function loadCorePrinters(ContainerBuilder $container)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Progress\ProgressCounterPrinter', array(
             new Reference(self::RESULT_TO_STRING_CONVERTER_ID),
             new Reference(TranslatorExtension::TRANSLATOR_ID),
@@ -100,6 +101,8 @@ class ProgressFormatterFactory implements FormatterFactory
 
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Progress\ProgressListPrinter', array(
 =======
+=======
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
         $definition = new Definition('Behat\Behat\Output\Node\Printer\CounterPrinter', array(
             new Reference(self::RESULT_TO_STRING_CONVERTER_ID),
             new Reference(TranslatorExtension::TRANSLATOR_ID),
@@ -107,6 +110,9 @@ class ProgressFormatterFactory implements FormatterFactory
         $container->setDefinition('output.node.printer.counter', $definition);
 
         $definition = new Definition('Behat\Behat\Output\Node\Printer\ListPrinter', array(
+<<<<<<< HEAD
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
+=======
 >>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
             new Reference(self::RESULT_TO_STRING_CONVERTER_ID),
             new Reference(ExceptionExtension::PRESENTER_ID),
@@ -114,7 +120,11 @@ class ProgressFormatterFactory implements FormatterFactory
             '%paths.base%'
         ));
 <<<<<<< HEAD
+<<<<<<< HEAD
         $container->setDefinition('output.node.printer.progress.list', $definition);
+=======
+        $container->setDefinition('output.node.printer.list', $definition);
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 =======
         $container->setDefinition('output.node.printer.list', $definition);
 >>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
@@ -126,8 +136,13 @@ class ProgressFormatterFactory implements FormatterFactory
 
         $definition = new Definition('Behat\Behat\Output\Node\Printer\Progress\ProgressStatisticsPrinter', array(
 <<<<<<< HEAD
+<<<<<<< HEAD
             new Reference('output.node.printer.progress.counter'),
             new Reference('output.node.printer.progress.list')
+=======
+            new Reference('output.node.printer.counter'),
+            new Reference('output.node.printer.list')
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 =======
             new Reference('output.node.printer.counter'),
             new Reference('output.node.printer.list')

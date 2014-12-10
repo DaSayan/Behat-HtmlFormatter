@@ -138,7 +138,11 @@ final class OutlineListener implements EventListener
 
         $this->example = $event->getScenario();
 
+<<<<<<< HEAD
         $this->exampleSetupPrinter->printSetup($formatter, $event->getSetup(), '');
+=======
+        $this->exampleSetupPrinter->printSetup($formatter, $event->getSetup());
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
         $this->examplePrinter->printHeader($formatter, $event->getFeature(), $this->example);
     }
 
@@ -173,7 +177,11 @@ final class OutlineListener implements EventListener
             return;
         }
 
+<<<<<<< HEAD
         $this->stepSetupPrinter->printSetup($formatter, $event->getSetup(), '');
+=======
+        $this->stepSetupPrinter->printSetup($formatter, $event->getSetup());
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
     }
 
     /**

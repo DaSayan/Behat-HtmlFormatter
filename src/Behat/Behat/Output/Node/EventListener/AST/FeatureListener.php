@@ -72,7 +72,11 @@ final class FeatureListener implements EventListener
             return;
         }
 
+<<<<<<< HEAD
         $this->setupPrinter->printSetup($formatter, $event->getSetup(), '');
+=======
+        $this->setupPrinter->printSetup($formatter, $event->getSetup());
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
         $this->featurePrinter->printHeader($formatter, $event->getFeature());
     }
 

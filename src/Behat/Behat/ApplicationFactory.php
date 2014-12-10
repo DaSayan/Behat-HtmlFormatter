@@ -17,7 +17,10 @@ use Behat\Behat\Gherkin\ServiceContainer\GherkinExtension;
 use Behat\Behat\Hook\ServiceContainer\HookExtension;
 use Behat\Behat\Output\ServiceContainer\Formatter\PrettyFormatterFactory;
 use Behat\Behat\Output\ServiceContainer\Formatter\ProgressFormatterFactory;
+<<<<<<< HEAD
 use Behat\Behat\Output\ServiceContainer\Formatter\HtmlFormatterFactory;
+=======
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 use Behat\Behat\Snippet\ServiceContainer\SnippetExtension;
 use Behat\Behat\Tester\ServiceContainer\TesterExtension;
 use Behat\Behat\Transformation\ServiceContainer\TransformationExtension;
@@ -44,7 +47,11 @@ use Behat\Testwork\Translator\ServiceContainer\TranslatorExtension;
  */
 final class ApplicationFactory extends BaseFactory
 {
+<<<<<<< HEAD
     const VERSION = '3.0.14';
+=======
+    const VERSION = '3.0-dev';
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 
     /**
      * {@inheritdoc}
@@ -136,7 +143,10 @@ final class ApplicationFactory extends BaseFactory
         return array(
             new PrettyFormatterFactory($processor),
             new ProgressFormatterFactory($processor),
+<<<<<<< HEAD
             new HtmlFormatterFactory($processor)
+=======
+>>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
         );
     }
 }
