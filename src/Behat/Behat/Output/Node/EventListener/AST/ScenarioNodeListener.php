@@ -90,11 +90,8 @@ final class ScenarioNodeListener implements EventListener
         }
 
         if ($this->setupPrinter) {
-<<<<<<< HEAD
-            $this->setupPrinter->printSetup($formatter, $event->getSetup(), $eventName);
-=======
+
             $this->setupPrinter->printSetup($formatter, $event->getSetup());
->>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
         }
 
         $this->scenarioPrinter->printHeader($formatter, $event->getFeature(), $event->getScenario());

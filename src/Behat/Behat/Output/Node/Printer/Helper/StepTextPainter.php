@@ -103,7 +103,6 @@ final class StepTextPainter
 
         return $text;
     }
-<<<<<<< HEAD
 
     /**
      * Modifies step text arguments according to definition.
@@ -163,6 +162,4 @@ final class StepTextPainter
 
         return $text;
     }
-=======
->>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
 }

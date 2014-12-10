@@ -209,17 +209,10 @@ final class OutlineTableListener implements EventListener
 
         $example = $event->getScenario();
 
-<<<<<<< HEAD
-        $this->exampleSetupPrinter->printSetup($formatter, $this->exampleSetup, $eventName);
-
-        foreach ($this->stepBeforeTestedEvents as $beforeEvent) {
-            $this->stepSetupPrinter->printSetup($formatter, $beforeEvent->getSetup(), $eventName);
-=======
         $this->exampleSetupPrinter->printSetup($formatter, $this->exampleSetup);
 
         foreach ($this->stepBeforeTestedEvents as $beforeEvent) {
             $this->stepSetupPrinter->printSetup($formatter, $beforeEvent->getSetup());
->>>>>>> 33f400055af66ef1e24c0ca9404f7d14cf9a7c95
         }
 
         $this->exampleRowPrinter->printExampleRow($formatter, $this->outline, $example, $this->stepAfterTestedEvents);
