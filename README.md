@@ -21,8 +21,7 @@ To get it without re-running Composer (if you installed Behat with Composer), go
 - Create into the **vendor/symfony** directory a directory named **templating**
 - Create into this new directory a directory named  **Symfony**, and into it a directory named **Component**
 - Into the **Component** directory, import the Templating Component from the Symfony Repository, [from this adress.](https://github.com/symfony/Templating.git). You must now have a **Templating** directory into the **Component** directory.
-- After this, edit the **/vendor/composer/autoload_namespaces.php** file, and add the following line into the array, after the line for the Yaml Component, to have the new component loaded : ```'Symfony\\Component\\Templating\\' => array($vendorDir . '/symfony/templating'),
-```
+- After this, edit the **/vendor/composer/autoload_namespaces.php** file, and add the following line into the array, after the line for the Yaml Component, to have the new component loaded : `'Symfony\\Component\\Templating\\' => array($vendorDir . '/symfony/templating'),`
 
 And it's done.
 
