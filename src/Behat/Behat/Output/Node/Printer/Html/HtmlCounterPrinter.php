@@ -84,8 +84,10 @@ final class HtmlCounterPrinter implements CounterPrinter
 
         $message = $this->translator->transChoice($intro, $totalCount, array('%1%' => $totalCount), 'output');
 
+        $tabIntro = explode('_', $intro) ;
+        
         $templateValues = array(
-            'intro' => explode('_', $intro)[0],
+            'intro' => $tabIntro[0],
             'detailedStats' => $detailedStats,
             'message' => $message
         );
