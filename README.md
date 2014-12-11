@@ -9,6 +9,22 @@ Behat is a BDD framework for PHP to help you test business expectations.
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/Behat/Behat/badges/quality-score.png?s=ad84e95fc2405712f88a96d89b4f31dfe5c80fae)](https://scrutinizer-ci.com/g/Behat/Behat/)
 [![Total Downloads](https://poser.pugx.org/behat/behat/downloads.svg)](https://packagist.org/packages/behat/behat)
 
+About this fork
+----------------
+
+The Behat-HtmlFormatter is a fork of Behat 3 : his purpose is to create a html output for the Behat reports, as did Behat 2. It was initiated by  [emwalpole](https://github.com/emwalpole) ([HtmlFormatter](https://github.com/emwalpole/Behat-HtmlFormatter)). 
+
+To operate this formatter, it's necessary to have the **Templating** Component of Symfony installed (it's not installed by default with the composer.json provided with Behat).
+
+To get it without re-running Composer (if you installed Behat with Composer), go into your vendor directory and do the following steps :
+
+- Create into the **vendor/symfony** directory a directory named **templating**
+- Create into this new directory a directory named  **Symfony**, and into it a directory named **Component**
+- Into the **Component** directory, import the Templating Component from the Symfony Repository, [from this adress.](https://github.com/symfony/Templating.git). You must now have a **Templating** directory into the **Component** directory.
+- After this, edit the **/vendor/composer/autoload_namespaces.php** file, and add the following line into the array, after the line for the Yaml Component, to have the new component loaded : `'Symfony\\Component\\Templating\\' => array($vendorDir . '/symfony/templating'),`
+
+And it's done.
+
 Installing Behat
 ----------------
 

@@ -29,3 +29,4 @@ interface CounterPrinter
      */
     public function printCounters(OutputPrinter $printer, $intro, array $stats);
 
+}
