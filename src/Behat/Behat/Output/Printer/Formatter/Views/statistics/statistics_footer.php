@@ -11,3 +11,4 @@ echo "<span class='switcher'><a href='javascript:void(0)' id='behat_show_all'>[+
 echo "<span class='switcher'><a href='javascript:void(0)' id='behat_hide_all'>[-] all</a></span>";
 echo "</div><!--end of switchers section -->";
 echo "</div><!--end of the stats section -->";
+echo "</html><!--end of html document -->";
