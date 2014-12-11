@@ -94,10 +94,10 @@
                 $suite.addClass('jq-toggle-opened');
             });
 
-        $('.summary .counters .pending')
+        $('.summary .counters .undefined')
             .addClass('switcher')
             .click(function () {
-                var $scenario = $('.feature .scenario:has(.pending)');
+                var $scenario = $('.feature .scenario:has(.undefined)');
                 var $feature = $scenario.parent();
                 var $suite = $feature.parent();
 
