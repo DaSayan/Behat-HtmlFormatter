@@ -12,7 +12,7 @@ Behat is a BDD framework for PHP to help you test business expectations.
 About this fork
 ----------------
 
-This is a fork from the first version of the [HtmlFormatter](https://github.com/emwalpole/Behat-HtmlFormatter) for Behat 3 written by [emwalpole](https://github.com/emwalpole). 
+The Behat-HtmlFormatter is a fork of Behat 3 : his purpose is to create a html output for the Behat reports, as did Behat 2. It was initiated by  [emwalpole](https://github.com/emwalpole) ([HtmlFormatter](https://github.com/emwalpole/Behat-HtmlFormatter)). 
 
 To operate this formatter, it's necessary to have the **Templating** Component of Symfony installed (it's not installed by default with the composer.json provided with Behat).
 
