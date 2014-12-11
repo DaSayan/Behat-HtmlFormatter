@@ -9,12 +9,14 @@
 $excluded = array('username', 'login', 'password') ;
 
 //function of strpos with an array of needles (stackoverflow)
-function strposa($haystack, $needle, $offset=0) {
-    if(!is_array($needle)) $needle = array($needle);
-    foreach($needle as $query) {
-        if(strpos($haystack, $query, $offset) !== false) return true; // stop on first true result
+if (!function_exists('strposa')) {
+    function strposa($haystack, $needle, $offset=0) {
+        if(!is_array($needle)) $needle = array($needle);
+        foreach($needle as $query) {
+            if(strpos($haystack, $query, $offset) !== false) return true; // stop on first true result
+        }
+        return false;
     }
-    return false;
 }
 
 echo "<h4>Contexts:</h4>";
