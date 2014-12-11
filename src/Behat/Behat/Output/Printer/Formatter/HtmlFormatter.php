@@ -73,10 +73,14 @@ class HtmlFormatter
         //Sanitize html if it's a string
         array_walk_recursive($array, function(&$value) {
                 if(is_string($value)){
+                    if (preg_match('!!u', $value)) {
+                        //default encoding is ASCII, need to convert UTF-8 strings if any
+                        $value = utf8_decode($value) ;
+                    }
                     $value = htmlentities($value);
                 };
             });
-
+        
         return $this->templating->render($template, $array);
     }
 }
